@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework.serializers import StringRelatedField
 from ddlfs.models import Device, Alarm, Acknowledgement, Node
 
 
@@ -23,6 +24,7 @@ class AckSerializer(serializers.ModelSerializer):
 class AlarmSerializer(serializers.ModelSerializer):
     node = NodeRefSerializer(read_only=True)
     ack = AckSerializer(read_only=True)
+    severity = StringRelatedField(read_only=True)
 
     class Meta:
         model = Alarm

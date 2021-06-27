@@ -25,7 +25,7 @@ class AlarmHistoryViewSet(viewsets.ModelViewSet):
 class NodeViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.NodeSerializer
 
-    def get_queryset(self):
+    def get_queryset(self):pip
         nodes = Node.objects.all()
         return nodes
 

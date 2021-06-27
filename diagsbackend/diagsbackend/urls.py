@@ -40,7 +40,7 @@ router.register(r'ack', views.AckViewSet, basename='ack')
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('api/v1/', include(router.urls)),
-                  path('api/v1/sev/', views.AlarmSeverityViewSet.as_view(), name='detailcreate'),
+                  # path('api/v1/sev/', views.AlarmSeverityViewSet.as_view(), name='detailcreate'),
                   # path('api/auth/', include('djoser.urls.authtoken')),
 ]
               #     path('ddlfs/', include('ddlfs.urls')),
